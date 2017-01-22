@@ -12,6 +12,8 @@ class CardViewController: UIViewController {
     
     var pageIndex: Int = 0
     var yachtCard: YachtCard?
+    
+    /// 定义/初始化工具类
     let flipPresentAnimationController = FlipPresentAnimationController()
     let flipDismissAnimationController = FlipDismissAnimationController()
     let swipeInteractionController = SwipeInteractionController()
@@ -36,7 +38,9 @@ class CardViewController: UIViewController {
     @objc private func tapAction() {
         let vc = RevealViewController()
         vc.yachtCard = yachtCard
+        /// 设置模态跳转的代理方法
         vc.transitioningDelegate = self
+        /// 设置需要手势的控制器
         swipeInteractionController.wireToViewController(vc: vc)
         present(vc, animated: true, completion: nil)
         
