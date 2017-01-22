@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="XMCustomUIViewControllerTransitions" customModuleProvider="target">
             <connections>
+                <outlet property="cardView" destination="Snd-R2-FoC" id="6F4-Ds-nKN"/>
+                <outlet property="descLabel" destination="PR7-yt-HQU" id="zt5-Jv-F7y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +22,34 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snd-R2-FoC">
+                    <rect key="frame" x="63" y="167" width="250" height="334"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PR7-yt-HQU">
+                            <rect key="frame" x="104" y="156" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1176470588" green="0.43529411759999997" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="PR7-yt-HQU" firstAttribute="centerY" secondItem="Snd-R2-FoC" secondAttribute="centerY" id="3tT-y6-aJi"/>
+                        <constraint firstAttribute="width" secondItem="Snd-R2-FoC" secondAttribute="height" multiplier="3/4" id="8Md-1g-UCv"/>
+                        <constraint firstItem="PR7-yt-HQU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Snd-R2-FoC" secondAttribute="leading" constant="20" id="BLe-Ji-GyU"/>
+                        <constraint firstItem="PR7-yt-HQU" firstAttribute="centerX" secondItem="Snd-R2-FoC" secondAttribute="centerX" id="f4p-CD-5xa"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PR7-yt-HQU" secondAttribute="trailing" constant="20" id="j1Z-yo-3ze"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Snd-R2-FoC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="EMj-av-FqQ"/>
+                <constraint firstItem="Snd-R2-FoC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HB5-sE-Upk"/>
+                <constraint firstItem="Snd-R2-FoC" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/2" id="OtE-vQ-bjK"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>
     </objects>
 </document>

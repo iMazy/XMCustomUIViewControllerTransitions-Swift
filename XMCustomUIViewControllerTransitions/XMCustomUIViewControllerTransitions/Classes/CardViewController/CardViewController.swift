@@ -9,11 +9,25 @@
 import UIKit
 
 class CardViewController: UIViewController {
-
+    
+    @IBOutlet weak var cardView: UIView!
+    
+    @IBOutlet weak var descLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        cardView.layer.cornerRadius = 25
+        cardView.layer.masksToBounds = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        cardView.addGestureRecognizer(tap)
+    }
+    
+    @objc private func tapAction() {
+        
     }
 
     override func didReceiveMemoryWarning() {

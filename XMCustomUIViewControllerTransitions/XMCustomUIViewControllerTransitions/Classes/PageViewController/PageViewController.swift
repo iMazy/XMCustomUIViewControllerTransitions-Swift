@@ -9,11 +9,16 @@
 import UIKit
 
 class PageViewController: UIPageViewController {
+    
+//    var yachtCards {
+//        return
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dataSource = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +27,23 @@ class PageViewController: UIPageViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension PageViewController: UIPageViewControllerDataSource {
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        return nil
     }
-    */
-
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        return nil
+    }
+    
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
 }
