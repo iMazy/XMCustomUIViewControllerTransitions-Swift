@@ -14,7 +14,7 @@ class CardViewController: UIViewController {
     var yachtCard: YachtCard?
     let flipPresentAnimationController = FlipPresentAnimationController()
     let flipDismissAnimationController = FlipDismissAnimationController()
-    
+    let swipeInteractionController = SwipeInteractionController()
     
     @IBOutlet weak var cardView: UIView!
     
@@ -37,6 +37,7 @@ class CardViewController: UIViewController {
         let vc = RevealViewController()
         vc.yachtCard = yachtCard
         vc.transitioningDelegate = self
+        swipeInteractionController.wireToViewController(vc: vc)
         present(vc, animated: true, completion: nil)
         
     }
@@ -57,5 +58,9 @@ extension CardViewController: UIViewControllerTransitioningDelegate {
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         flipDismissAnimationController.destinationFrame = cardView.frame
         return flipDismissAnimationController
+    }
+    
+    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return swipeInteractionController.interactionInProgress ? swipeInteractionController : nil
     }
 }

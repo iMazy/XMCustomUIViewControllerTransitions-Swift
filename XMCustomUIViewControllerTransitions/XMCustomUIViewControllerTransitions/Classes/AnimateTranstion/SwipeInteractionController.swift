@@ -10,21 +10,23 @@ import UIKit
 
 class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
 
-    var interactionInProgress: Bool?
+    var interactionInProgress: Bool = false
     var shouldCompleteTransition: Bool = false
     var viewController: UIViewController?
     
     func wireToViewController(vc: UIViewController) {
         viewController = vc
+        prepareGestureRecognizerInView(view: vc.view)
     }
     
     private func prepareGestureRecognizerInView(view: UIView) {
         let edgePanGesture = UIScreenEdgePanGestureRecognizer.init(target: self, action: #selector(handleGesture))
+        edgePanGesture.edges = .left
         view.addGestureRecognizer(edgePanGesture)
     }
     
     @objc func handleGesture(gesture: UIScreenEdgePanGestureRecognizer) {
-        let translation = gesture.translation(in: gesture.view)
+        let translation = gesture.translation(in: gesture.view?.superview)
         var progress = translation.x/200
         progress = CGFloat(fminf(fmaxf(Float(progress), 0), 1.0))
         
@@ -33,12 +35,15 @@ class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
             case .began:
                 interactionInProgress = true
                 viewController?.dismiss(animated: true, completion: nil)
+            
             case .changed:
                 shouldCompleteTransition = progress > 0.5
                 update(progress)
+            
             case .cancelled:
                 interactionInProgress = false
                 cancel()
+            
             case .ended:
                 self.interactionInProgress = false
                 if !self.shouldCompleteTransition {
@@ -46,6 +51,7 @@ class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
                 } else {
                     self.finish()
                 }
+            
             default:
                 break
         }
