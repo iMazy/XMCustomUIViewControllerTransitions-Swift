@@ -18,7 +18,6 @@ class CardViewController: UIViewController {
     
     @IBOutlet weak var descLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

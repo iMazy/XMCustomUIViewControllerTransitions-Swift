@@ -9,5 +9,16 @@
 import UIKit
 
 class FlipPresentAnimationController: NSObject {
+    var originFrame =  CGRect.zero
+}
 
+extension FlipPresentAnimationController: UIViewControllerAnimatedTransitioning {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 1.0
+    }
+    
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        
+    }
+    
 }
