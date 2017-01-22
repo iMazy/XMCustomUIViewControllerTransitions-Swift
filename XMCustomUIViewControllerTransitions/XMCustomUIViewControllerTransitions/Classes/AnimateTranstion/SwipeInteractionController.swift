@@ -20,11 +20,18 @@ class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
     }
     
     private func prepareGestureRecognizerInView(view: UIView) {
+        // 添加边缘手势
         let edgePanGesture = UIScreenEdgePanGestureRecognizer.init(target: self, action: #selector(handleGesture))
+        // 设置手势位置为左边
         edgePanGesture.edges = .left
         view.addGestureRecognizer(edgePanGesture)
     }
     
+    /**
+     处理左划手势
+     
+     @param gestureRecognizer 手势
+     */
     @objc func handleGesture(gesture: UIScreenEdgePanGestureRecognizer) {
         let translation = gesture.translation(in: gesture.view?.superview)
         var progress = translation.x/200
@@ -45,11 +52,11 @@ class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
                 cancel()
             
             case .ended:
-                self.interactionInProgress = false
+                interactionInProgress = false
                 if !self.shouldCompleteTransition {
-                    self.cancel()
+                    cancel()
                 } else {
-                    self.finish()
+                    finish()
                 }
             
             default:
