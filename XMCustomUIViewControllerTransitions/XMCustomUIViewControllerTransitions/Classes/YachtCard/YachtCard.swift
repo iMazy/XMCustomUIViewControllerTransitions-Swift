@@ -9,5 +9,7 @@
 import UIKit
 
 class YachtCard: NSObject {
-
+    var name: String?
+    var desc: String?
+    var image: String?
 }

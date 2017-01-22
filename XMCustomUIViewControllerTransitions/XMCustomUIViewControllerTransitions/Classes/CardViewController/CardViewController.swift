@@ -10,6 +10,10 @@ import UIKit
 
 class CardViewController: UIViewController {
     
+    var pageIndex: Int = 0
+    var yachtCard: YachtCard?
+    
+    
     @IBOutlet weak var cardView: UIView!
     
     @IBOutlet weak var descLabel: UILabel!
@@ -21,6 +25,8 @@ class CardViewController: UIViewController {
         // Do any additional setup after loading the view.
         cardView.layer.cornerRadius = 25
         cardView.layer.masksToBounds = true
+        
+        descLabel.text = yachtCard?.desc
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction))
         cardView.addGestureRecognizer(tap)

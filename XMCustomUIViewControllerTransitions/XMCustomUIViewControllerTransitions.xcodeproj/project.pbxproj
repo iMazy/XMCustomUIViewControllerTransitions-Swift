@@ -87,12 +87,12 @@
 		9FE762211E34534A005BA63F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9FE762221E34534A005BA63F /* AnimateTranstion */,
-				9FE762231E34534A005BA63F /* CardViewController */,
-				9FE762241E34534A005BA63F /* Others */,
 				9FE762271E34534A005BA63F /* PageViewController */,
+				9FE762231E34534A005BA63F /* CardViewController */,
 				9FE762281E34534A005BA63F /* RevealViewController */,
+				9FE762221E34534A005BA63F /* AnimateTranstion */,
 				9FE762291E34534A005BA63F /* YachtCard */,
+				9FE762241E34534A005BA63F /* Others */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
