@@ -12,7 +12,7 @@ class CardViewController: UIViewController {
     
     var pageIndex: Int = 0
     var yachtCard: YachtCard?
-    
+    let flipPresentAnimationController = FlipPresentAnimationController()
     
     @IBOutlet weak var cardView: UIView!
     
@@ -34,6 +34,7 @@ class CardViewController: UIViewController {
     @objc private func tapAction() {
         let vc = RevealViewController()
         vc.yachtCard = yachtCard
+        vc.transitioningDelegate = self
         present(vc, animated: true, completion: nil)
         
     }
@@ -43,4 +44,11 @@ class CardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension CardViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        flipPresentAnimationController.originFrame = cardView.frame
+        return flipPresentAnimationController
+    }
 }
