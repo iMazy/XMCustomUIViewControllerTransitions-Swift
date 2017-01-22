@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beauties</key>
+	<array>
+		<dict>
+			<key>image</key>
+			<string>yacht1</string>
+			<key>name</key>
+			<string>“阿尔-萨拉马”号(AL SALAMAH)—139米</string>
+			<key>desc</key>
+			<string>目前世界最大已下水私人游艇</string>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>yacht2</string>
+			<key>name</key>
+			<string>“旭日”号(RISING SUN)—138米</string>
+			<key>desc</key>
+			<string>旭日”号就是一个“大”字</string>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>yacht3</string>
+			<key>name</key>
+			<string>“章鱼”号(OCTOPUS)—126米</string>
+			<key>desc</key>
+			<string>真正的“私人游艇”之王，和这艘游艇的优雅外形相比，“旭日”号只能算是邮轮</string>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>yacht4</string>
+			<key>name</key>
+			<string>“萨瓦罗纳”号(SAVARONA)—124米</string>
+			<key>desc</key>
+			<string>现年78岁高龄的“萨瓦罗纳”号凭借着古典优雅的特点至今仍活跃在租赁市场上</string>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>yacht5</string>
+			<key>name</key>
+			<string>“亚历山大”号(ALEXANDER)—122米</string>
+			<key>desc</key>
+			<string>在外观上，能和“旭日”号比“丑”的当数这艘“亚历山大”号，因为该艇原本就是一艘邮轮</string>
+		</dict>
+	</array>
+</dict>
+</plist>
