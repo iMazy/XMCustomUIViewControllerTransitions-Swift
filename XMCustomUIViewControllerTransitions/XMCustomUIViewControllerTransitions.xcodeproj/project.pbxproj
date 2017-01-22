@@ -24,6 +24,7 @@
 		9FE762401E345688005BA63F /* YachtCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE7623F1E345688005BA63F /* YachtCard.swift */; };
 		9FE762421E34569C005BA63F /* YachtCardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE762411E34569C005BA63F /* YachtCardStore.swift */; };
 		9FE762441E3456B9005BA63F /* Yacht.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FE762431E3456B9005BA63F /* Yacht.plist */; };
+		9FE762461E349F0B005BA63F /* custom_swift.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9FE762451E349F0B005BA63F /* custom_swift.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		9FE7623F1E345688005BA63F /* YachtCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YachtCard.swift; sourceTree = "<group>"; };
 		9FE762411E34569C005BA63F /* YachtCardStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YachtCardStore.swift; sourceTree = "<group>"; };
 		9FE762431E3456B9005BA63F /* Yacht.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yacht.plist; sourceTree = "<group>"; };
+		9FE762451E349F0B005BA63F /* custom_swift.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = custom_swift.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		9FE7622C1E345362005BA63F /* SupportingFile */ = {
 			isa = PBXGroup;
 			children = (
+				9FE762451E349F0B005BA63F /* custom_swift.gif */,
 				9FE762131E344FF3005BA63F /* Main.storyboard */,
 				9FE762161E344FF3005BA63F /* Assets.xcassets */,
 				9FE762181E344FF3005BA63F /* LaunchScreen.storyboard */,
@@ -229,6 +232,7 @@
 				9FE7621A1E344FF3005BA63F /* LaunchScreen.storyboard in Resources */,
 				9FE762171E344FF3005BA63F /* Assets.xcassets in Resources */,
 				9FE7623C1E34564D005BA63F /* RevealViewController.xib in Resources */,
+				9FE762461E349F0B005BA63F /* custom_swift.gif in Resources */,
 				9FE762151E344FF3005BA63F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
