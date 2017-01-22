@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9FE762101E344FF3005BA63F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE7620F1E344FF3005BA63F /* AppDelegate.swift */; };
-		9FE762121E344FF3005BA63F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE762111E344FF3005BA63F /* ViewController.swift */; };
 		9FE762151E344FF3005BA63F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE762131E344FF3005BA63F /* Main.storyboard */; };
 		9FE762171E344FF3005BA63F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE762161E344FF3005BA63F /* Assets.xcassets */; };
 		9FE7621A1E344FF3005BA63F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE762181E344FF3005BA63F /* LaunchScreen.storyboard */; };
+		9FE7622A1E34534A005BA63F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE762251E34534A005BA63F /* AppDelegate.swift */; };
+		9FE7622B1E34534A005BA63F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE762261E34534A005BA63F /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9FE7620C1E344FF3005BA63F /* XMCustomUIViewControllerTransitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMCustomUIViewControllerTransitions.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FE7620F1E344FF3005BA63F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FE762111E344FF3005BA63F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9FE762141E344FF3005BA63F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9FE762161E344FF3005BA63F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FE762161E344FF3005BA63F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = XMCustomUIViewControllerTransitions/Assets.xcassets; sourceTree = "<group>"; };
 		9FE762191E344FF3005BA63F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9FE7621B1E344FF3005BA63F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FE7621B1E344FF3005BA63F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = XMCustomUIViewControllerTransitions/Info.plist; sourceTree = "<group>"; };
+		9FE762251E34534A005BA63F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FE762261E34534A005BA63F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,79 @@
 		9FE7620E1E344FF3005BA63F /* XMCustomUIViewControllerTransitions */ = {
 			isa = PBXGroup;
 			children = (
-				9FE7620F1E344FF3005BA63F /* AppDelegate.swift */,
-				9FE762111E344FF3005BA63F /* ViewController.swift */,
+				9FE762211E34534A005BA63F /* Classes */,
+				9FE7622C1E345362005BA63F /* SupportingFile */,
+			);
+			path = XMCustomUIViewControllerTransitions;
+			sourceTree = "<group>";
+		};
+		9FE762211E34534A005BA63F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9FE762221E34534A005BA63F /* AnimateTranstion */,
+				9FE762231E34534A005BA63F /* CardViewController */,
+				9FE762241E34534A005BA63F /* Others */,
+				9FE762271E34534A005BA63F /* PageViewController */,
+				9FE762281E34534A005BA63F /* RevealViewController */,
+				9FE762291E34534A005BA63F /* YachtCard */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9FE762221E34534A005BA63F /* AnimateTranstion */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AnimateTranstion;
+			sourceTree = "<group>";
+		};
+		9FE762231E34534A005BA63F /* CardViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CardViewController;
+			sourceTree = "<group>";
+		};
+		9FE762241E34534A005BA63F /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				9FE762251E34534A005BA63F /* AppDelegate.swift */,
+				9FE762261E34534A005BA63F /* ViewController.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		9FE762271E34534A005BA63F /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PageViewController;
+			sourceTree = "<group>";
+		};
+		9FE762281E34534A005BA63F /* RevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RevealViewController;
+			sourceTree = "<group>";
+		};
+		9FE762291E34534A005BA63F /* YachtCard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YachtCard;
+			sourceTree = "<group>";
+		};
+		9FE7622C1E345362005BA63F /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
 				9FE762131E344FF3005BA63F /* Main.storyboard */,
 				9FE762161E344FF3005BA63F /* Assets.xcassets */,
 				9FE762181E344FF3005BA63F /* LaunchScreen.storyboard */,
 				9FE7621B1E344FF3005BA63F /* Info.plist */,
 			);
-			path = XMCustomUIViewControllerTransitions;
+			name = SupportingFile;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FE762121E344FF3005BA63F /* ViewController.swift in Sources */,
-				9FE762101E344FF3005BA63F /* AppDelegate.swift in Sources */,
+				9FE7622A1E34534A005BA63F /* AppDelegate.swift in Sources */,
+				9FE7622B1E34534A005BA63F /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +215,7 @@
 				9FE762141E344FF3005BA63F /* Base */,
 			);
 			name = Main.storyboard;
+			path = XMCustomUIViewControllerTransitions;
 			sourceTree = "<group>";
 		};
 		9FE762181E344FF3005BA63F /* LaunchScreen.storyboard */ = {
@@ -158,6 +224,7 @@
 				9FE762191E344FF3005BA63F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = XMCustomUIViewControllerTransitions;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
