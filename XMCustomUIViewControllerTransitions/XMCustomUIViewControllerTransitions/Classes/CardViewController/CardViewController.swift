@@ -13,6 +13,8 @@ class CardViewController: UIViewController {
     var pageIndex: Int = 0
     var yachtCard: YachtCard?
     let flipPresentAnimationController = FlipPresentAnimationController()
+    let flipDismissAnimationController = FlipDismissAnimationController()
+    
     
     @IBOutlet weak var cardView: UIView!
     
@@ -50,5 +52,10 @@ extension CardViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         flipPresentAnimationController.originFrame = cardView.frame
         return flipPresentAnimationController
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        flipDismissAnimationController.destinationFrame = cardView.frame
+        return flipDismissAnimationController
     }
 }
