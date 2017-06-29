@@ -4,11 +4,11 @@ Present and dismiss view controllers using custom transitions by Swift 3.0+.
 用Swift编写的视图的自定义模态的跳转,利用UIPageViewController实现卡片是分页滚动!
 
 ***
-###GIF示例:
+### GIF示例:
 ![image](https://github.com/Mazy-ma/XMCustomUIViewControllerTransitions_Swift/blob/master/XMCustomUIViewControllerTransitions/custom_swift.gif)
 ***
 
-###present跳转核心代码
+### present跳转核心代码
 
 ```
 func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -71,7 +71,7 @@ func animateTransition(using transitionContext: UIViewControllerContextTransitio
 
 ```
 ***
-###dismiss跳转核心代码
+### dismiss跳转核心代码
 
 ```
 func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -129,7 +129,7 @@ func animateTransition(using transitionContext: UIViewControllerContextTransitio
 ```
 
 ***
-###跳需要模态跳转的控制器中接受代理
+### 跳需要模态跳转的控制器中接受代理
 ```
       /// 设置模态跳转的代理方法
       vc.transitioningDelegate = self
@@ -140,7 +140,7 @@ func animateTransition(using transitionContext: UIViewControllerContextTransitio
 
 
 ***
-###实现UIViewControllerTransitioningDelegate代理方法
+### 实现UIViewControllerTransitioningDelegate代理方法
 ```
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         flipPresentAnimationController.originFrame = cardView.frame
