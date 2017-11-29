@@ -1,4 +1,4 @@
-# XMCustomUIViewControllerTransitions_Swift
+# XMCustomUIViewControllerTransitions by swift
 Present and dismiss view controllers using custom transitions by Swift 3.0+.
 
 用Swift编写的视图的自定义模态的跳转,利用UIPageViewController实现卡片是分页滚动!
